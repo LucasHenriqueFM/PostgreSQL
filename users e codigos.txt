@@ -1,0 +1,44 @@
+Código SQL utilazdo para criar as tabelas:
+
+-- Criação da tabela de usuários
+CREATE TABLE test_users (
+  id SERIAL PRIMARY KEY,
+  nome VARCHAR(255) NOT NULL,
+  idade INTEGER NOT NULL
+);
+
+-- Criação da tabela de endereços
+CREATE TABLE test_address (
+  id SERIAL PRIMARY KEY,
+  user_id INTEGER NOT NULL,
+  rua VARCHAR(255) NOT NULL,
+  numero VARCHAR(255) NOT NULL,
+  cidade VARCHAR(255) NOT NULL,
+  estado VARCHAR(255) NOT NULL,
+  cep VARCHAR(255) NOT NULL,
+  FOREIGN KEY (user_id) REFERENCES test_users (id)
+);
+
+-- Criação da tabela de e-mails
+CREATE TABLE test_mails (
+  id SERIAL PRIMARY KEY,
+  user_id INTEGER NOT NULL,
+  email VARCHAR(255) NOT NULL,
+  FOREIGN KEY (user_id) REFERENCES test_users (id)
+);
+
+
+códigos SQL:
+ •Selecionar todos usuários que tem São Paulo no endereço:
+ SELECT * FROM test_address WHERE endereco LIKE '%São Paulo%';
+
+ •Alterar emeail de algum usuários especifico:
+ UPDATE test_address
+ SET email = 'seu email'
+ WHERE id = id de quem deseja alterar;
+
+ • Deletar um usuário que não tenha address cadastrado
+ DELETE FROM test_users WHERE test_address IS NULL;
+ 
+ •calcular a média de idade quem tem maior de 18:
+ SELECT AVG(idade) AS media_idade FROM test_users WHERE idade > 18;

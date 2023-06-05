@@ -1,0 +1,263 @@
+2023-04-26 10:41:29.002 -03 [17388] LOG:  database system was shut down at 2023-04-26 10:41:18 -03
+2023-04-26 10:46:28.995 -03 [8440] LOG:  checkpoint starting: time
+2023-04-26 10:46:36.610 -03 [8440] LOG:  checkpoint complete: wrote 73 buffers (0.4%); 0 WAL file(s) added, 0 removed, 0 recycled; write=7.580 s, sync=0.025 s, total=7.615 s; sync files=31, longest=0.004 s, average=0.001 s; distance=394 kB, estimate=394 kB
+2023-04-26 10:50:35.496 -03 [22776] ERROR:  syntax error at or near "psql" at character 1
+2023-04-26 10:50:35.496 -03 [22776] STATEMENT:  psql -h <hostname> -p <port> -U <username> -d <database>
+2023-04-26 10:51:18.460 -03 [22776] ERROR:  syntax error at or near "table" at character 12
+2023-04-26 10:51:18.460 -03 [22776] STATEMENT:  select all table
+2023-04-26 10:51:28.613 -03 [8440] LOG:  checkpoint starting: time
+2023-04-26 10:51:34.879 -03 [8440] LOG:  checkpoint complete: wrote 58 buffers (0.4%); 0 WAL file(s) added, 0 removed, 0 recycled; write=6.224 s, sync=0.032 s, total=6.267 s; sync files=42, longest=0.005 s, average=0.001 s; distance=195 kB, estimate=374 kB
+2023-04-26 10:53:21.711 -03 [22776] ERROR:  syntax error at or near "\" at character 1
+2023-04-26 10:53:21.711 -03 [22776] STATEMENT:  \dt
+2023-04-26 10:56:28.887 -03 [8440] LOG:  checkpoint starting: time
+2023-04-26 10:56:29.113 -03 [8440] LOG:  checkpoint complete: wrote 2 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.212 s, sync=0.006 s, total=0.226 s; sync files=2, longest=0.005 s, average=0.003 s; distance=7 kB, estimate=337 kB
+2023-04-26 11:01:28.115 -03 [8440] LOG:  checkpoint starting: time
+2023-04-26 11:01:31.526 -03 [8440] LOG:  checkpoint complete: wrote 32 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=3.379 s, sync=0.022 s, total=3.412 s; sync files=21, longest=0.005 s, average=0.002 s; distance=122 kB, estimate=316 kB
+2023-04-26 11:03:50.897 -03 [22776] ERROR:  relation "teste_address" does not exist at character 15
+2023-04-26 11:03:50.897 -03 [22776] STATEMENT:  select * from teste_address
+	
+2023-04-26 11:05:15.693 -03 [22776] ERROR:  invalid input syntax for type boolean: "id" at character 32
+2023-04-26 11:05:15.693 -03 [22776] STATEMENT:  select * from test_users where 'id'
+2023-04-26 11:05:18.520 -03 [22776] ERROR:  syntax error at or near "," at character 36
+2023-04-26 11:05:18.520 -03 [22776] STATEMENT:  select * from test_users where 'id',
+2023-04-26 11:05:22.281 -03 [22776] ERROR:  syntax error at end of input at character 32
+2023-04-26 11:05:22.281 -03 [22776] STATEMENT:  select * from test_users where 
+2023-04-26 11:06:28.529 -03 [8440] LOG:  checkpoint starting: time
+2023-04-26 11:06:29.426 -03 [8440] LOG:  checkpoint complete: wrote 9 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.877 s, sync=0.009 s, total=0.897 s; sync files=8, longest=0.004 s, average=0.002 s; distance=0 kB, estimate=284 kB
+2023-04-26 11:16:15.910 -03 [22776] ERROR:  column "cidade" of relation "test_address" already exists
+2023-04-26 11:16:15.910 -03 [22776] STATEMENT:  ALTER TABLE test_address RENAME COLUMN state TO cidade;
+2023-04-26 11:16:28.435 -03 [8440] LOG:  checkpoint starting: time
+2023-04-26 11:16:28.991 -03 [8440] LOG:  checkpoint complete: wrote 6 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.535 s, sync=0.011 s, total=0.557 s; sync files=5, longest=0.005 s, average=0.003 s; distance=22 kB, estimate=258 kB
+2023-04-26 11:16:38.985 -03 [22776] ERROR:  syntax error at or near "'state'" at character 40
+2023-04-26 11:16:38.985 -03 [22776] STATEMENT:  ALTER TABLE test_address RENAME COLUMN 'state' TO estado;
+2023-04-26 11:17:44.364 -03 [22776] ERROR:  column "cip_code" does not exist
+2023-04-26 11:17:44.364 -03 [22776] STATEMENT:  ALTER TABLE test_address RENAME COLUMN cip_code TO cep;
+2023-04-26 11:21:28.998 -03 [8440] LOG:  checkpoint starting: time
+2023-04-26 11:21:29.756 -03 [8440] LOG:  checkpoint complete: wrote 8 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.746 s, sync=0.004 s, total=0.758 s; sync files=4, longest=0.001 s, average=0.001 s; distance=32 kB, estimate=235 kB
+2023-04-26 11:24:48.487 -03 [22776] ERROR:  column "gereto" of relation "test_users" does not exist at character 25
+2023-04-26 11:24:48.487 -03 [22776] STATEMENT:  INSERT INTO test_users (gereto) VALUES ('masculino');
+2023-04-26 11:24:55.237 -03 [22776] ERROR:  null value in column "nome" of relation "test_users" violates not-null constraint
+2023-04-26 11:24:55.237 -03 [22776] DETAIL:  Failing row contains (2, null, null, masculino).
+2023-04-26 11:24:55.237 -03 [22776] STATEMENT:  INSERT INTO test_users (genero) VALUES ('masculino');
+2023-04-26 11:26:23.686 -03 [22776] ERROR:  column "genero" does not exist
+2023-04-26 11:26:23.686 -03 [22776] STATEMENT:  ALTER TABLE test_address RENAME COLUMN genero TO sexo;
+2023-04-26 11:26:28.763 -03 [8440] LOG:  checkpoint starting: time
+2023-04-26 11:26:29.222 -03 [8440] LOG:  checkpoint complete: wrote 5 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.440 s, sync=0.008 s, total=0.459 s; sync files=5, longest=0.004 s, average=0.002 s; distance=20 kB, estimate=214 kB
+2023-04-26 11:26:57.649 -03 [22776] ERROR:  relation "test_userus" does not exist at character 15
+2023-04-26 11:26:57.649 -03 [22776] STATEMENT:  select * from test_userus;
+2023-04-26 11:31:28.223 -03 [8440] LOG:  checkpoint starting: time
+2023-04-26 11:31:28.889 -03 [8440] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.647 s, sync=0.007 s, total=0.667 s; sync files=7, longest=0.002 s, average=0.001 s; distance=20 kB, estimate=194 kB
+2023-04-26 11:33:39.886 -03 [22776] ERROR:  column "name" of relation "test_users" does not exist at character 23
+2023-04-26 11:33:39.886 -03 [22776] STATEMENT:  UPDATE test_users
+	SET name = 'João'
+	WHERE id = 1;
+2023-04-26 11:36:21.064 -03 [22776] ERROR:  duplicate key value violates unique constraint "test_users_pkey"
+2023-04-26 11:36:21.064 -03 [22776] DETAIL:  Key (id)=(3) already exists.
+2023-04-26 11:36:21.064 -03 [22776] STATEMENT:  UPDATE test_users
+	SET id = '3'
+	WHERE id = 1;
+2023-04-26 11:36:28.898 -03 [8440] LOG:  checkpoint starting: time
+2023-04-26 11:36:29.015 -03 [8440] LOG:  checkpoint complete: wrote 2 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.101 s, sync=0.006 s, total=0.117 s; sync files=2, longest=0.005 s, average=0.003 s; distance=1 kB, estimate=175 kB
+2023-04-26 11:36:50.874 -03 [22776] ERROR:  column "name" of relation "test_users" does not exist at character 23
+2023-04-26 11:36:50.874 -03 [22776] STATEMENT:  UPDATE test_users
+	SET name = 'Pedro'
+	WHERE id = 1;
+2023-04-26 11:37:39.046 -03 [22776] ERROR:  syntax error at or near "Para" at character 1
+2023-04-26 11:37:39.046 -03 [22776] STATEMENT:  Para alterar o valor da coluna id do Pedro de 3 para 1, você pode usar a seguinte consulta SQL:
+	
+	java
+	Copy code
+	UPDATE test_users
+	SET id = 1
+	WHERE name = 'Pedro' AND id = 3;
+2023-04-26 11:37:53.008 -03 [22776] ERROR:  column "name" does not exist at character 36
+2023-04-26 11:37:53.008 -03 [22776] HINT:  Perhaps you meant to reference the column "test_users.nome".
+2023-04-26 11:37:53.008 -03 [22776] STATEMENT:  UPDATE test_users
+	SET id = 1
+	WHERE name = 'Pedro' AND id = 3;
+2023-04-26 11:37:57.040 -03 [22776] ERROR:  duplicate key value violates unique constraint "test_users_pkey"
+2023-04-26 11:37:57.040 -03 [22776] DETAIL:  Key (id)=(1) already exists.
+2023-04-26 11:37:57.040 -03 [22776] STATEMENT:  UPDATE test_users
+	SET id = 1
+	WHERE nome = 'Pedro' AND id = 3;
+2023-04-26 11:37:59.367 -03 [22776] ERROR:  duplicate key value violates unique constraint "test_users_pkey"
+2023-04-26 11:37:59.367 -03 [22776] DETAIL:  Key (id)=(1) already exists.
+2023-04-26 11:37:59.367 -03 [22776] STATEMENT:  UPDATE test_users
+	SET id = 1
+	WHERE nome = 'Pedro' AND id = 3;
+2023-04-26 11:41:28.025 -03 [8440] LOG:  checkpoint starting: time
+2023-04-26 11:41:28.158 -03 [8440] LOG:  checkpoint complete: wrote 2 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.116 s, sync=0.006 s, total=0.133 s; sync files=2, longest=0.006 s, average=0.003 s; distance=1 kB, estimate=158 kB
+2023-04-26 11:42:03.373 -03 [22776] ERROR:  cannot drop column id of table test_users because other objects depend on it
+2023-04-26 11:42:03.373 -03 [22776] DETAIL:  constraint test_address_user_id_fkey on table test_address depends on column id of table test_users
+	constraint test_mails_user_id_fkey on table test_mails depends on column id of table test_users
+2023-04-26 11:42:03.373 -03 [22776] HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2023-04-26 11:42:03.373 -03 [22776] STATEMENT:  ALTER TABLE test_users
+	DROP COLUMN id;
+2023-04-26 11:42:46.449 -03 [22776] ERROR:  cannot drop column id of table test_users because other objects depend on it
+2023-04-26 11:42:46.449 -03 [22776] DETAIL:  constraint test_address_user_id_fkey on table test_address depends on column id of table test_users
+	constraint test_mails_user_id_fkey on table test_mails depends on column id of table test_users
+2023-04-26 11:42:46.449 -03 [22776] HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2023-04-26 11:42:46.449 -03 [22776] STATEMENT:  ALTER TABLE test_users
+	DROP COLUMN id;
+2023-04-26 11:46:28.165 -03 [8440] LOG:  checkpoint starting: time
+2023-04-26 11:46:28.515 -03 [8440] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.330 s, sync=0.008 s, total=0.351 s; sync files=4, longest=0.005 s, average=0.002 s; distance=0 kB, estimate=142 kB
+2023-04-26 11:51:28.518 -03 [8440] LOG:  checkpoint starting: time
+2023-04-26 11:51:28.874 -03 [8440] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.335 s, sync=0.009 s, total=0.356 s; sync files=4, longest=0.005 s, average=0.003 s; distance=1 kB, estimate=128 kB
+2023-04-26 11:51:56.999 -03 [22776] ERROR:  syntax error at or near ";" at character 35
+2023-04-26 11:51:56.999 -03 [22776] STATEMENT:  DELETE FROM test_users WHERE id = ;
+2023-04-26 11:56:28.887 -03 [8440] LOG:  checkpoint starting: time
+2023-04-26 11:56:29.704 -03 [8440] LOG:  checkpoint complete: wrote 8 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.779 s, sync=0.007 s, total=0.818 s; sync files=7, longest=0.002 s, average=0.001 s; distance=1 kB, estimate=115 kB
+2023-04-26 11:57:36.050 -03 [22776] ERROR:  relation "test_adress" does not exist at character 15
+2023-04-26 11:57:36.050 -03 [22776] STATEMENT:  select * from test_adress;
+2023-04-26 12:02:16.204 -03 [22776] ERROR:  syntax error at or near "AFTER" at character 57
+2023-04-26 12:02:16.204 -03 [22776] STATEMENT:  ALTER TABLE test_address ADD COLUMN number VARCHAR(255) AFTER rua;
+2023-04-26 12:02:43.792 -03 [22776] ERROR:  syntax error at or near "AFTER" at character 57
+2023-04-26 12:02:43.792 -03 [22776] STATEMENT:  ALTER TABLE test_address ADD COLUMN numero VARCHAR(255) AFTER rua;
+2023-04-26 12:03:16.036 -03 [22776] ERROR:  syntax error at or near "first" at character 57
+2023-04-26 12:03:16.036 -03 [22776] STATEMENT:  ALTER TABLE test_address ADD COLUMN numero VARCHAR(255) first rua;
+2023-04-26 12:04:26.820 -03 [22776] ERROR:  syntax error at or near "AFTER" at character 57
+2023-04-26 12:04:26.820 -03 [22776] STATEMENT:  ALTER TABLE test_address ADD COLUMN numero VARCHAR(255) AFTER rua;
+2023-04-26 12:04:56.725 -03 [22776] ERROR:  syntax error at or near "street" at character 1
+2023-04-26 12:04:56.725 -03 [22776] STATEMENT:  street
+2023-04-26 12:05:01.885 -03 [22776] ERROR:  syntax error at or near "AFTER" at character 57
+2023-04-26 12:05:01.885 -03 [22776] STATEMENT:  ALTER TABLE test_address ADD COLUMN numero VARCHAR(255) AFTER rua;
+2023-04-26 12:06:51.490 -03 [22776] ERROR:  syntax error at or near "AFTER" at character 57
+2023-04-26 12:06:51.490 -03 [22776] STATEMENT:  ALTER TABLE test_address ADD COLUMN numero VARCHAR(255) AFTER street;
+2023-04-26 12:06:54.713 -03 [22776] ERROR:  syntax error at or near "AFTER" at character 57
+2023-04-26 12:06:54.713 -03 [22776] STATEMENT:  ALTER TABLE test_address ADD COLUMN numero VARCHAR(255) AFTER rua;
+2023-04-26 12:08:14.573 -03 [22776] ERROR:  syntax error at or near "after" at character 57
+2023-04-26 12:08:14.573 -03 [22776] STATEMENT:  ALTER TABLE test_address ADD COLUMN numero VARCHAR(255) after rua;
+2023-04-26 12:11:28.725 -03 [8440] LOG:  checkpoint starting: time
+2023-04-26 12:11:29.173 -03 [8440] LOG:  checkpoint complete: wrote 5 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.428 s, sync=0.009 s, total=0.449 s; sync files=5, longest=0.005 s, average=0.002 s; distance=17 kB, estimate=105 kB
+2023-04-26 12:11:42.597 -03 [22776] ERROR:  syntax error at or near "RENAME" at character 59
+2023-04-26 12:11:42.597 -03 [22776] STATEMENT:  ALTER TABLE test_address 
+	RENAME COLUMN cidade TO numero;
+	RENAME COLUMN estado TO cidade;
+	RENAME COLUMN cep TO estado;
+	RENAME COLUMN numero TO cep;
+2023-04-26 12:12:49.998 -03 [22776] ERROR:  syntax error at or near "," at character 57
+2023-04-26 12:12:49.998 -03 [22776] STATEMENT:  ALTER TABLE test_address 
+	RENAME COLUMN cidade TO numero,
+	RENAME COLUMN estado TO cidade,
+	RENAME COLUMN cep TO estado,
+	RENAME COLUMN numero TO cep;
+2023-04-26 12:13:16.058 -03 [22776] ERROR:  syntax error at or near "," at character 57
+2023-04-26 12:13:16.058 -03 [22776] STATEMENT:  ALTER TABLE test_address 
+	RENAME COLUMN cidade TO numero,
+	RENAME COLUMN estado TO cidade,
+	RENAME COLUMN cep TO estado,
+	RENAME COLUMN numero TO cep;
+2023-04-26 12:13:22.905 -03 [22776] ERROR:  syntax error at or near "," at character 57
+2023-04-26 12:13:22.905 -03 [22776] STATEMENT:  ALTER TABLE test_address 
+	RENAME COLUMN cidade TO numero,
+	-- RENAME COLUMN estado TO cidade,
+	-- RENAME COLUMN cep TO estado,
+	-- RENAME COLUMN numero TO cep;
+2023-04-26 12:13:31.843 -03 [22776] ERROR:  column "numero" of relation "test_address" already exists
+2023-04-26 12:13:31.843 -03 [22776] STATEMENT:  ALTER TABLE test_address 
+	RENAME COLUMN cidade TO numero;
+	-- RENAME COLUMN estado TO cidade;
+	-- RENAME COLUMN cep TO estado;
+	-- RENAME COLUMN numero TO cep;
+2023-04-26 12:13:33.480 -03 [22776] ERROR:  column "numero" of relation "test_address" already exists
+2023-04-26 12:13:33.480 -03 [22776] STATEMENT:  ALTER TABLE test_address 
+	RENAME COLUMN cidade TO numero;
+	-- RENAME COLUMN estado TO cidade;
+	-- RENAME COLUMN cep TO estado;
+	-- RENAME COLUMN numero TO cep;
+2023-04-26 12:13:55.203 -03 [22776] ERROR:  syntax error at or near "RENAME" at character 1
+2023-04-26 12:13:55.203 -03 [22776] STATEMENT:  RENAME COLUMN estado TO cidade;
+2023-04-26 12:14:20.092 -03 [22776] ERROR:  syntax error at or near "RENAME" at character 1
+2023-04-26 12:14:20.092 -03 [22776] STATEMENT:  RENAME COLUMN cep TO estado;
+2023-04-26 12:14:27.350 -03 [22776] ERROR:  syntax error at or near "RENAME" at character 1
+2023-04-26 12:14:27.350 -03 [22776] STATEMENT:  RENAME COLUMN numero TO cep;
+2023-04-26 12:14:47.307 -03 [22776] ERROR:  syntax error at or near "RENAME" at character 1
+2023-04-26 12:14:47.307 -03 [22776] STATEMENT:  RENAME COLUMN numerr TO numer;
+2023-04-26 12:15:24.235 -03 [22776] ERROR:  syntax error at or near "RENAME" at character 1
+2023-04-26 12:15:24.235 -03 [22776] STATEMENT:  RENAME COLUMN numer TO numero;
+2023-04-26 12:15:45.573 -03 [22776] ERROR:  syntax error at or near "-" at character 19
+2023-04-26 12:15:45.573 -03 [22776] STATEMENT:  select * from test-address;
+2023-04-26 12:16:28.176 -03 [8440] LOG:  checkpoint starting: time
+2023-04-26 12:16:28.637 -03 [8440] LOG:  checkpoint complete: wrote 5 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.441 s, sync=0.008 s, total=0.462 s; sync files=4, longest=0.005 s, average=0.002 s; distance=24 kB, estimate=97 kB
+2023-04-26 12:26:28.665 -03 [8440] LOG:  checkpoint starting: time
+2023-04-26 12:26:29.455 -03 [8440] LOG:  checkpoint complete: wrote 8 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.765 s, sync=0.011 s, total=0.791 s; sync files=7, longest=0.005 s, average=0.002 s; distance=1 kB, estimate=88 kB
+2023-04-26 12:28:12.065 -03 [22776] ERROR:  update or delete on table "test_users" violates foreign key constraint "test_address_user_id_fkey" on table "test_address"
+2023-04-26 12:28:12.065 -03 [22776] DETAIL:  Key (id)=(1) is still referenced from table "test_address".
+2023-04-26 12:28:12.065 -03 [22776] STATEMENT:  DELETE FROM test_users WHERE id = 1;
+2023-04-26 12:31:28.465 -03 [8440] LOG:  checkpoint starting: time
+2023-04-26 12:31:28.931 -03 [8440] LOG:  checkpoint complete: wrote 5 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.443 s, sync=0.010 s, total=0.466 s; sync files=5, longest=0.005 s, average=0.002 s; distance=2 kB, estimate=79 kB
+2023-04-26 12:36:28.924 -03 [8440] LOG:  checkpoint starting: time
+2023-04-26 12:36:29.481 -03 [8440] LOG:  checkpoint complete: wrote 6 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.537 s, sync=0.010 s, total=0.557 s; sync files=6, longest=0.005 s, average=0.002 s; distance=1 kB, estimate=71 kB
+2023-04-26 12:40:25.416 -03 [22776] ERROR:  syntax error at or near "select" at character 29
+2023-04-26 12:40:25.416 -03 [22776] STATEMENT:  select * from test_address,
+	select * from test_users,
+2023-04-26 12:40:31.701 -03 [22776] ERROR:  syntax error at end of input at character 54
+2023-04-26 12:40:31.701 -03 [22776] STATEMENT:  select * from test_address;
+	select * from test_users,
+2023-04-26 12:40:32.700 -03 [22776] ERROR:  syntax error at end of input at character 54
+2023-04-26 12:40:32.700 -03 [22776] STATEMENT:  select * from test_address;
+	select * from test_users,
+2023-04-26 12:40:33.051 -03 [22776] ERROR:  syntax error at end of input at character 54
+2023-04-26 12:40:33.051 -03 [22776] STATEMENT:  select * from test_address;
+	select * from test_users,
+2023-04-26 12:40:33.168 -03 [22776] ERROR:  syntax error at end of input at character 54
+2023-04-26 12:40:33.168 -03 [22776] STATEMENT:  select * from test_address;
+	select * from test_users,
+2023-04-26 12:40:33.344 -03 [22776] ERROR:  syntax error at end of input at character 54
+2023-04-26 12:40:33.344 -03 [22776] STATEMENT:  select * from test_address;
+	select * from test_users,
+2023-04-26 12:42:24.829 -03 [22776] ERROR:  relation "test_usuario" does not exist at character 15
+2023-04-26 12:42:24.829 -03 [22776] STATEMENT:  select * from test_usuario
+2023-04-26 12:46:28.490 -03 [8440] LOG:  checkpoint starting: time
+2023-04-26 12:46:28.840 -03 [8440] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.330 s, sync=0.007 s, total=0.350 s; sync files=4, longest=0.005 s, average=0.002 s; distance=2 kB, estimate=64 kB
+2023-04-26 15:54:04.595 -03 [31764] ERROR:  column "age" does not exist at character 12
+2023-04-26 15:54:04.595 -03 [31764] STATEMENT:  SELECT AVG(age) AS media_idade
+	FROM test_users
+	WHERE age > 18;
+2023-04-26 15:54:33.213 -03 [31764] ERROR:  column "age" does not exist at character 56
+2023-04-26 15:54:33.213 -03 [31764] STATEMENT:  SELECT AVG(idade) AS media_idade
+	FROM test_users
+	WHERE age > 18;
+2023-04-26 15:54:43.154 -03 [31764] ERROR:  column "age" does not exist at character 12
+2023-04-26 15:54:43.154 -03 [31764] STATEMENT:  SELECT AVG(age) AS idade
+	FROM test_users
+	WHERE age > 18;
+2023-04-26 15:56:08.394 -03 [31764] ERROR:  column "age" does not exist at character 12
+2023-04-26 15:56:08.394 -03 [31764] STATEMENT:  SELECT AVG(age) AS idade FROM test_users WHERE age > 18;
+2023-04-26 15:57:46.611 -03 [31764] ERROR:  column "age" does not exist at character 12
+2023-04-26 15:57:46.611 -03 [31764] STATEMENT:  SELECT AVG(age) AS media_idade FROM test_users WHERE age > 18;
+2023-04-26 16:17:41.037 -03 [31764] ERROR:  INSERT has more target columns than expressions at character 34
+2023-04-26 16:17:41.037 -03 [31764] STATEMENT:  insert into test_mails (user_id, email) values ('5');
+2023-04-26 16:19:33.670 -03 [31764] ERROR:  relation "teste_mails" does not exist at character 13
+2023-04-26 16:19:33.670 -03 [31764] STATEMENT:  delete from teste_mails where id = 3;
+2023-04-26 16:20:36.467 -03 [31764] ERROR:  null value in column "email" of relation "test_mails" violates not-null constraint
+2023-04-26 16:20:36.467 -03 [31764] DETAIL:  Failing row contains (4, 5, null).
+2023-04-26 16:20:36.467 -03 [31764] STATEMENT:  insert into test_mails (user_id) values ('5');
+2023-04-26 16:20:45.158 -03 [31764] ERROR:  null value in column "email" of relation "test_mails" violates not-null constraint
+2023-04-26 16:20:45.158 -03 [31764] DETAIL:  Failing row contains (5, 6, null).
+2023-04-26 16:20:45.158 -03 [31764] STATEMENT:  insert into test_mails (user_id) values ('6');
+2023-04-26 16:21:29.153 -03 [8440] LOG:  checkpoint starting: time
+2023-04-26 16:21:29.712 -03 [8440] LOG:  checkpoint complete: wrote 6 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.541 s, sync=0.009 s, total=0.560 s; sync files=6, longest=0.004 s, average=0.002 s; distance=10 kB, estimate=59 kB
+2023-04-26 16:21:37.226 -03 [31764] ERROR:  relation "test_maisl" does not exist at character 15
+2023-04-26 16:21:37.226 -03 [31764] STATEMENT:  select * from test_maisl
+2023-04-26 16:26:29.719 -03 [8440] LOG:  checkpoint starting: time
+2023-04-26 16:26:29.941 -03 [8440] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.210 s, sync=0.005 s, total=0.223 s; sync files=3, longest=0.004 s, average=0.002 s; distance=1 kB, estimate=53 kB
+2023-04-26 16:31:29.952 -03 [8440] LOG:  checkpoint starting: time
+2023-04-26 16:31:30.284 -03 [8440] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.317 s, sync=0.007 s, total=0.333 s; sync files=4, longest=0.005 s, average=0.002 s; distance=2 kB, estimate=48 kB
+2023-04-26 16:36:29.288 -03 [8440] LOG:  checkpoint starting: time
+2023-04-26 16:36:29.624 -03 [8440] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.323 s, sync=0.007 s, total=0.336 s; sync files=4, longest=0.004 s, average=0.002 s; distance=3 kB, estimate=44 kB
+2023-04-26 16:41:29.628 -03 [8440] LOG:  checkpoint starting: time
+2023-04-26 16:41:30.088 -03 [8440] LOG:  checkpoint complete: wrote 5 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.443 s, sync=0.009 s, total=0.460 s; sync files=5, longest=0.004 s, average=0.002 s; distance=4 kB, estimate=40 kB
+2023-04-26 16:51:26.133 -03 [31764] ERROR:  column "user_id" of relation "test_users" does not exist at character 25
+2023-04-26 16:51:26.133 -03 [31764] STATEMENT:  INSERT INTO test_users (user_id, rua, numero, cidade, estado, cep) VALUES (6, 'Av Lucas Soe', 164, 'Curitiba', 'PR', 83410-045);
+2023-04-26 16:56:29.120 -03 [8440] LOG:  checkpoint starting: time
+2023-04-26 16:56:29.563 -03 [8440] LOG:  checkpoint complete: wrote 5 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.429 s, sync=0.007 s, total=0.444 s; sync files=5, longest=0.004 s, average=0.002 s; distance=3 kB, estimate=36 kB
+2023-04-26 17:11:29.580 -03 [8440] LOG:  checkpoint starting: time
+2023-04-26 17:11:30.037 -03 [8440] LOG:  checkpoint complete: wrote 5 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.442 s, sync=0.007 s, total=0.458 s; sync files=5, longest=0.004 s, average=0.002 s; distance=2 kB, estimate=32 kB
+2023-04-26 17:16:29.038 -03 [8440] LOG:  checkpoint starting: time
+2023-04-26 17:16:29.482 -03 [8440] LOG:  checkpoint complete: wrote 5 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.427 s, sync=0.008 s, total=0.444 s; sync files=5, longest=0.004 s, average=0.002 s; distance=4 kB, estimate=30 kB
+2023-04-26 17:28:23.417 -03 [31764] ERROR:  missing FROM-clause entry for table "test_address" at character 76
+2023-04-26 17:28:23.417 -03 [31764] STATEMENT:  DELETE FROM test_users
+	WHERE NOT EXISTS (
+	  SELECT 1 FROM test_mails WHERE test_address.user_id = test_users.id
+	) AND id IS NOT NULL;
